@@ -141,13 +141,13 @@ def ip2domian(target, args, targetNum, targetCount):
 
 def printTitle(icp):
     if icp:
-        msg = f"+{'-' * 17}+{'-' * 20}+{'-' * 10}+{'-' * 37}+{'-' * 10}+{'-' * 22}+\n"
-        msg += f"|{rpad('ip/domain', 17)}|{rpad('反查域名', 20)}|{rpad('百度权重', 10)}|{rpad('单位名称', 37)}|{rpad('单位性质', 10)}|{rpad('备案编号', 22)}|\n"
-        msg += f"+{'-' * 17}+{'-' * 20}+{'-' * 10}+{'-' * 37}+{'-' * 10}+{'-' * 22}+"
+        msg = f"+{'-' * 17}+{'-' * 20}+{'-' * 18}+{'-' * 37}+{'-' * 10}+{'-' * 22}+\n"
+        msg += f"|{rpad('ip/domain', 17)}|{rpad('反查域名', 20)}|{rpad('百度权重', 18)}|{rpad('单位名称', 37)}|{rpad('单位性质', 10)}|{rpad('备案编号', 22)}|\n"
+        msg += f"+{'-' * 17}+{'-' * 20}+{'-' * 18}+{'-' * 37}+{'-' * 10}+{'-' * 22}+"
     else:
-        msg = f"+{'-' * 17}+{'-' * 20}+{'-' * 10}+\n"
-        msg += f"|{rpad('ip/domain', 17)}|{rpad('反查域名', 20)}|{rpad('百度权重', 10)}|\n"
-        msg += f"+{'-' * 17}+{'-' * 20}+{'-' * 10}+"
+        msg = f"+{'-' * 17}+{'-' * 20}+{'-' * 18}+\n"
+        msg += f"|{rpad('ip/domain', 17)}|{rpad('反查域名', 20)}|{rpad('百度权重', 18)}|\n"
+        msg += f"+{'-' * 17}+{'-' * 20}+{'-' * 18}+"
     print(msg)
 
 
@@ -170,12 +170,12 @@ def printMsg(result, icp):
 
     if icp:
         print(
-            f"\r|{rpad(result[0], 17)}|{rpad(result[1], 20)}|{rankColor[result[2]]}{rpad('    ' + str(result[2]), 10)}\033[0m|{rpad(result[3], 37)}|{rpad(result[4], 10)}|{rpad(result[5], 22)}|")
-        print(f"+{'-' * 17}+{'-' * 20}+{'-' * 10}+{'-' * 37}+{'-' * 10}+{'-' * 22}+")
+            f"\r|{rpad(result[0], 17)}|{rpad(result[1], 20)}|{rankColor[result[2]]}{rpad('    ' + str(result[2]), 18)}\033[0m|{rpad(result[3], 37)}|{rpad(result[4], 10)}|{rpad(result[5], 22)}|")
+        print(f"+{'-' * 17}+{'-' * 20}+{'-' * 18}+{'-' * 37}+{'-' * 10}+{'-' * 22}+")
     else:
         print(
-            f"\r|{rpad(result[0], 17)}|{rpad(result[1], 20)}|{rankColor[result[2]]}{rpad('    ' + str(result[2]), 10)}\033[0m|")
-        print(f"+{'-' * 17}+{'-' * 20}+{'-' * 10}+")
+            f"\r|{rpad(result[0], 17)}|{rpad(result[1], 20)}|{rankColor[result[2]]}{rpad('    ' + str(result[2]), 18)}\033[0m|")
+        print(f"+{'-' * 17}+{'-' * 20}+{'-' * 18}+")
 
 
 if __name__ == "__main__":
